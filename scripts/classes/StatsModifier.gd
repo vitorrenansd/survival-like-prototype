@@ -1,7 +1,7 @@
 class_name StatsModifier
 extends Resource
 
-## Modificador de stats, classe do item/livro/buff do jogo
+## Classe do item/livro do jogo
 @export var name: String = ""
 @export var bonus_health: int = 0
 @export var damage_multiplier: float = 1.0
