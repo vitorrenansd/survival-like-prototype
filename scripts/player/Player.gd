@@ -12,9 +12,9 @@ func _ready(): # Chama quando o obj fica prontos
 	movement = PlayerMovement.new(self)
 	current_stats.recalculate_stats()
 
-func _physics_process(delta): # Faz handle da movimentacao 
+func _physics_process(delta): # Usa a movimentação da classe PlayerMovement
 	movement.tick(delta)
 
-func add_modifier(modifier: StatsModifier) -> void: # Add modificador pra run do player (item? livro?)
+func add_modifier(modifier: StatsModifier) -> void: # Add modificador pra run do player (item)
 	modifiers.append(modifier)
 	current_stats.recalculate_stats()

@@ -1,9 +1,7 @@
 class_name EnemyStats
 extends Node
 
-# Por enquanto mexer apenas na vida e dano, senão fica muito OP
-# Trabalhar na quantidade de inimigos, e não no movespeed impossível ou algo assim
-
+# Por enquanto não mexer no atkspd, senão fica muito OP
 @export var total_health: int
 @export var total_damage: float
 @export var total_attack_speed: float = 0.75
