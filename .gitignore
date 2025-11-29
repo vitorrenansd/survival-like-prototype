@@ -12,3 +12,6 @@ mono_crash.*
 *.old
 *.depren
 *.converted
+
+# Godot UID files
+*.gd.uid
