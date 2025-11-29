@@ -1,12 +1,8 @@
 class_name Player
-extends Node
-
-@export var base_stats: WarriorBaseStats
+extends CharacterBody2D
 
 var modifiers: Array[StatsModifier] = [] # Lista de modificadores ativos (itens? livros?)
-
 var final_health: int
-
 var final_damage: float
 var final_attack_speed: float
 var final_move_speed: float
