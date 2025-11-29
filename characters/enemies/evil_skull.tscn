@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://b83w8xqkquk6c"]
+
+[ext_resource type="Texture2D" uid="uid://bwerwrikkygv5" path="res://assets/characters/enemies/evil_skull.png" id="1_ms5kv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_42evj"]
+radius = 54.147945
+
+[node name="EvilSkull" type="CharacterBody2D"]
+
+[node name="EvilSkullSprite" type="Sprite2D" parent="."]
+position = Vector2(0, -77)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_ms5kv")
+
+[node name="Hurtbox" type="CollisionShape2D" parent="."]
+position = Vector2(0, -50)
+shape = SubResource("CircleShape2D_42evj")
+debug_color = Color(1, 0, 0, 0.50980395)
