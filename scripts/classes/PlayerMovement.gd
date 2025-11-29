@@ -1,9 +1,14 @@
 class_name PlayerMovement
 extends Node
 
-@export var player: Player
+var player: Player
 
-func _physics_process(_delta):
-	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
-	player.velocity = direction * player.final_move_speed
+
+func _init(p): # Construtor da classe: necessita Player
+	player = p
+
+func tick(_delta): # Lógica da movimentação do player no plano 2D
+	var input = Input.get_vector("move_left", "move_right", "move_up", "move_down")
+	var speed = player.stats.total_move_speed
+	player.velocity = input * speed
 	player.move_and_slide()
