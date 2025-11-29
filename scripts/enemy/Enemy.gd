@@ -3,6 +3,7 @@ extends CharacterBody2D
 
 @export var base_stats: Resource # Recebe uma classe de inimigo (evil skull, ...)
 @export var current_stats: EnemyStats
+@export var current_health: int
 var enemy_ai: EnemyAI
 
 
