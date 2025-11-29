@@ -1,6 +1,7 @@
 class_name Player
 extends CharacterBody2D
 
+@export var base_stats: WarriorBaseStats # Atualmente usando os stats do Warrior
 var modifiers: Array[StatsModifier] = [] # Lista de modificadores ativos (itens? livros?)
 var final_health: int
 var final_damage: float
