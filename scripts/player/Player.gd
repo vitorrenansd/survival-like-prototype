@@ -1,8 +1,8 @@
 class_name Player
 extends CharacterBody2D
 
-@export var base_stats: Warrior # Atualmente fixo nos stats do Warrior
-@export var modifiers: Array[StatsModifier] = [] # Lista de modificadores ativos (itens? livros?)
+@export var base_stats: Resource # Recebe uma classe de player (warrior, mago, ...)
+@export var modifiers: Array[StatsModifier] = [] # Lista de modificadores ativos (itens)
 @export var current_stats: PlayerStats
 @export var current_health: int
 var movement: PlayerMovement

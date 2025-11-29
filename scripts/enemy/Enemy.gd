@@ -1,7 +1,7 @@
 class_name Enemy
 extends CharacterBody2D
 
-@export var base_stats: int # placeholder EnemyType
+@export var base_stats: Resource # Recebe uma classe de inimigo (evil skull, ...)
 @export var current_stats: EnemyStats
 var enemy_ai: EnemyAI
 
