@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://b83w8xqkquk6c"]
 
-[ext_resource type="Texture2D" uid="uid://bwerwrikkygv5" path="res://assets/characters/enemies/evil_skull.png" id="1_ms5kv"]
+[ext_resource type="Texture2D" uid="uid://c635pongqhamy" path="res://assets/characters/enemies/evil_skull.png" id="1_ms5kv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_42evj"]
 radius = 54.147945
