@@ -1,21 +1,40 @@
-[gd_scene load_steps=4 format=3 uid="uid://bhontrv18owek"]
+[gd_scene load_steps=6 format=3 uid="uid://bhontrv18owek"]
 
 [ext_resource type="PackedScene" uid="uid://c0dtmhnxdbhgl" path="res://characters/player/player.tscn" id="1_l4hfo"]
+[ext_resource type="Script" uid="uid://r1tjtj4aakyj" path="res://scripts/WaveManager.gd" id="1_m0kc5"]
 [ext_resource type="Script" uid="uid://btb1a7mo74x4j" path="res://scripts/player/classes/Mage.gd" id="2_rxobr"]
 
 [sub_resource type="Resource" id="Resource_m0kc5"]
 script = ExtResource("2_rxobr")
 metadata/_custom_type_script = "uid://btb1a7mo74x4j"
 
-[node name="GamePrototype" type="Node2D"]
+[sub_resource type="Curve2D" id="Curve2D_rxobr"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -163, -79, 0, 0, 0, 0, 1380, -81, 0, 0, 0, 0, 1378, 869, 0, 0, 0, 0, -157, 869, 0, 0, 0, 0, -165, -79, 0, 0, 0, 0, -163, -79)
+}
+point_count = 6
 
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_left = -19.0
-offset_top = -19.0
+[node name="GamePrototype" type="Node2D"]
+script = ExtResource("1_m0kc5")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+offset_left = -58.0
+offset_top = 6.0
 offset_right = 1300.0
-offset_bottom = 737.0
+offset_bottom = 809.0
 color = Color(0.6333038, 0.433297, 1, 1)
 
 [node name="Player" parent="." instance=ExtResource("1_l4hfo")]
 position = Vector2(617, 409)
 base_stats = SubResource("Resource_m0kc5")
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_rxobr")
+
+[node name="EnemySpawner" type="PathFollow2D" parent="Path2D"]
+unique_name_in_owner = true
+position = Vector2(-163, -79)
+rotation = -0.0012961756
