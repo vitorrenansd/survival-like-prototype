@@ -2,11 +2,11 @@ class_name EnemyAI
 extends Node
 
 var enemy: Enemy
-var player: Player
+@onready var player: Player = get_node("/root/GamePrototype/Player")
 
 
-func _init(e): # Construtor da classe: necessita Enemy
-	enemy = e
+func _ready():
+	enemy = get_parent() # o pai é Enemy
 
 func _physics_process(_delta):
 	chase_player()

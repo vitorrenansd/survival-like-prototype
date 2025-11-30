@@ -6,9 +6,9 @@ extends CharacterBody2D
 var enemy_ai: EnemyAI
 var can_attack := true
 
+
 func _ready():
 	current_stats = EnemyStats.new(self)
-	enemy_ai = EnemyAI.new(self)
 	current_stats.recalculate_stats()
 
 func attack(player: Player):
