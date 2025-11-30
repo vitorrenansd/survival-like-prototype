@@ -21,7 +21,7 @@ func attack(player: Player):
 	can_attack = true
 
 func take_damage(amount: float):
-	current_stats.health -= amount
-	current_stats.health = floor(current_stats.health) # Arredonda pra baixo
-	if current_stats.health <= 0.0:
+	current_stats.current_health -= amount
+	current_stats.current_health = floor(current_stats.health) # Arredonda pra baixo
+	if current_stats.current_health <= 0.0:
 		queue_free() # morre/exclui
