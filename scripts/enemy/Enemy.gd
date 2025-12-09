@@ -20,8 +20,9 @@ func attack(player: Player):
 	await get_tree().create_timer(current_stats.attack_speed).timeout
 	can_attack = true
 
-func take_damage(amount: float):
-	current_stats.current_health -= amount
-	current_stats.current_health = floor(current_stats.health) # Arredonda pra baixo
-	if current_stats.current_health <= 0.0:
+func take_damage(amount: float) -> void:
+	var hp = self.current_stats.current_health
+	hp = ceil(hp - amount) # Arredonda pra cima
+	self.current_stats.current_health = hp
+	if hp <= 0.0:
 		queue_free() # morre/exclui
