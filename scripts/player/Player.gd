@@ -6,7 +6,7 @@ signal health_depleted
 @export var base_stats: Resource # Recebe uma classe de player (warrior, mago, ...)
 @export var modifiers: Array[StatsModifier] = [] # Lista de modificadores ativos (itens)
 @export var current_stats: PlayerStats
-var movement: PlayerMovement
+@onready var movement = $PlayerMovement
 
 
 func _ready(): # Chama quando o obj fica prontos

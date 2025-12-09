@@ -4,8 +4,8 @@ extends Node
 var player: Player
 
 
-func _init(p): # Construtor da classe: necessita Player
-	player = p
+func _ready():
+	player = get_parent()
 
 func tick(_delta): # Lógica da movimentação do player no plano 2D
 	var input = Input.get_vector("move_left", "move_right", "move_up", "move_down")
