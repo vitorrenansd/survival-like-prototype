@@ -24,8 +24,9 @@ func add_modifier(modifier: StatsModifier) -> void: # Add item na run atual do p
 	modifiers.append(modifier)
 	current_stats.recalculate_stats()
 
-func take_damage(amount: float):
-	current_stats.current_health -= amount
-	current_stats.current_health = ceil(current_stats.current_health) # Arredonda pra cima
-	if current_stats.current_health <= 0.0:
+func take_damage(amount: float) -> void:
+	var hp = self.current_stats.current_health
+	hp = ceil(hp - amount) # Arredonda pra cima
+	self.current_stats.current_health = hp
+	if hp <= 0.0:
 		health_depleted.emit()
