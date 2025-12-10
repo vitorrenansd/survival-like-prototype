@@ -19,12 +19,23 @@ func _physics_process(_delta):
 func ready_to_shoot() -> bool:
 	return shoot_timer.is_stopped()
 
-func lock_n_load() -> void:  ## Função que locka e atira no inimigo mais proximo
+func lock_n_load() -> void: # Função que locka e atira no inimigo mais proximo
 	var enemies_in_range = get_overlapping_bodies()
-	if enemies_in_range.size() > 0 and ready_to_shoot():
-		var nearest_enemy = enemies_in_range[0]
-		look_at(nearest_enemy.global_position)
-		fire()
+	if enemies_in_range.is_empty() or not ready_to_shoot():
+		return
+	
+	# Encontra o inimigo mais proximo
+	var nearest_enemy = enemies_in_range[0]
+	var nearest_dist := global_position.distance_squared_to(nearest_enemy.global_position)
+	for enemy in enemies_in_range:
+		var dist := global_position.distance_squared_to(enemy.global_position)
+		if dist < nearest_dist:
+			nearest_dist = dist
+			nearest_enemy = enemy
+	
+	# Mira e atira
+	look_at(nearest_enemy.global_position)
+	fire()
 
 func fire() -> void:
 	var new_bullet = self.BULLET.instantiate()
