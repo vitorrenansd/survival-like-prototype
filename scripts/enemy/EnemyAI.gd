@@ -2,7 +2,7 @@ class_name EnemyAI
 extends Node
 
 var enemy: Enemy
-@onready var player: Player = get_node("/root/GamePrototype/Player")
+@onready var player: Player = get_node("/root/Game/Player")
 
 
 func _ready():
