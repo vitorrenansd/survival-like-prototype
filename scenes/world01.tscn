@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://bhontrv18owek"]
 
-[ext_resource type="Script" uid="uid://cwrwwyuh7myre" path="res://scripts/WaveManager.gd" id="1_u36wx"]
-[ext_resource type="Script" uid="uid://djvo2djh7m07y" path="res://scripts/show_fps_label.gd" id="2_o246y"]
+[ext_resource type="Script" uid="uid://c8heher24bbpj" path="res://scripts/systems/WaveManager.gd" id="1_u36wx"]
+[ext_resource type="Script" uid="uid://dtak0xidrut3q" path="res://scripts/show_fps_label.gd" id="2_o246y"]
 [ext_resource type="PackedScene" uid="uid://c0dtmhnxdbhgl" path="res://scenes/characters/player/player.tscn" id="3_1a0pv"]
-[ext_resource type="Script" uid="uid://c7wdj67xp4wgp" path="res://scripts/player/classes/Mage.gd" id="4_n2inu"]
+[ext_resource type="Script" uid="uid://c88wtfj82lev6" path="res://scripts/entities/player/stats/Mage.gd" id="4_n2inu"]
 
 [sub_resource type="Resource" id="Resource_xh8g2"]
 script = ExtResource("4_n2inu")

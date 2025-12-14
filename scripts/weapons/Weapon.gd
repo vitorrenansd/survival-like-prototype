@@ -2,7 +2,7 @@ class_name Weapon
 extends Area2D
 
 @export var shooting_point: Marker2D
-const BULLET = preload("res://scenes/weapons/bullet.tscn")
+const BULLET = preload("res://scenes/weapons/bullets/pistol_bullet.tscn")
 var current_stats: PlayerStats
 @onready var shoot_timer: Timer = $ShootTimer
 

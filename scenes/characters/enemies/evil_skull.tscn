@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://b83w8xqkquk6c"]
 
-[ext_resource type="Script" uid="uid://dg4n2ivqhasu7" path="res://scripts/enemy/Enemy.gd" id="1_42evj"]
-[ext_resource type="Texture2D" uid="uid://bwerwrikkygv5" path="res://assets/characters/enemies/evil_skull.png" id="1_ms5kv"]
-[ext_resource type="Script" uid="uid://cak7fcf0q2ejg" path="res://scripts/enemy/classes/EvilSkull.gd" id="2_tu0kt"]
-[ext_resource type="Script" uid="uid://dohdsrme4w6q" path="res://scripts/enemy/EnemyAI.gd" id="4_w6con"]
+[ext_resource type="Script" uid="uid://0ue2he3n474m" path="res://scripts/entities/enemies/Enemy.gd" id="1_42evj"]
+[ext_resource type="Texture2D" uid="uid://ijx7fc2kgqf7" path="res://assets/characters/enemies/evil_skull.png" id="1_ms5kv"]
+[ext_resource type="Script" uid="uid://c3d15ya6aqihr" path="res://scripts/entities/enemies/stats/EvilSkull.gd" id="2_tu0kt"]
+[ext_resource type="Script" uid="uid://cmct7xrv7db1y" path="res://scripts/entities/enemies/EnemyAI.gd" id="4_w6con"]
 
 [sub_resource type="Resource" id="Resource_w6con"]
 script = ExtResource("2_tu0kt")

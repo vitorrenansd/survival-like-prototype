@@ -1,7 +1,7 @@
 class_name StatsModifier
 extends Resource
 
-## Classe do item/livro do jogo
+## Classe do itens do jogo
 @export var name: String = ""
 @export var bonus_health: int = 0
 @export var bonus_health_regen: int = 0
